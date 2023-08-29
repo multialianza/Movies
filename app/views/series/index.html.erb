@@ -1,0 +1,26 @@
+<h1>Series</h1>
+<%= link_to "Crear nueva serie", new_series_path  %>
+<br><hr>
+
+<section>
+  <div class="table-wrapper">
+    <table class="alt">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Synopsis</th>
+          <th>Director</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @series.each do |serie| %>
+          <tr>
+            <td><%= serie.name %></td>
+            <td><%= serie.synopsis %></td>
+            <td><%= serie.director %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>

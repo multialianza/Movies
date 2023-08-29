@@ -1,0 +1,27 @@
+<h1>Películas</h1>
+<%= link_to "Crear nueva película", new_movie_path  %>
+<br><hr>
+
+<section>
+  <div class="table-wrapper">
+    <table class="alt">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Synopsis</th>
+          <th>Director</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @movies.each do |movie| %>
+          <tr>
+            <td><%= movie.name %></td>
+            <td><%= movie.synopsis %></td>
+            <td><%= movie.director %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
